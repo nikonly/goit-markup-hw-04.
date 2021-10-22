@@ -95,41 +95,13 @@ body {
   display: flex;
   margin-left: auto;
 }
-/* ---------------------------------- */
-.icon-envelope {
-  display: block;
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-}
-.icon-envelope:hover {
-  fill: var(--accent-color);
-}
-
-.item-envelope,
-.item-smartphone {
-  display: flex;
-  align-items: center;
-}
-/* смартфон */
-.icon-smartphone {
-  display: block;
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-}
-.icon-smartphone:hover {
-  fill: var(--accent-color);
-}
-/* -------------------- */
+/* ------------контакты---------------------- */
 .contact .item + .item {
   margin-left: 50px;
 }
-
 .contact .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -139,15 +111,34 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
-
-.contact .link:hover,
-.contact .link:focus {
-  color: var(--accent-color);
-}
-
 .main-nav {
   display: flex;
   align-items: center;
+}
+.item-envelope,
+.item-smartphone {
+  display: flex;
+  align-items: center;
+}
+.icon-envelope,
+.icon-smartphone {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+.mail-link:hover,
+.mail-link:focus,
+.tel-link:hover,
+.tel-link:focus {
+  color: var(--accent-color);
+}
+
+.mail-link:hover .icon-envelope,
+.mail-link:focus .icon-envelope,
+.tel-link:hover .icon-smartphone,
+.tel-link:focus .icon-smartphone {
+  fill: var(--accent-color);
 }
 
 /* ----------------секции------------------------ */
@@ -275,7 +266,9 @@ h2 {
   height: 120px;
   background-color: var(--primary-bg-color);
   margin-bottom: 30px;
-  padding: 25px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .buttom-thumb {
   width: 70px;
@@ -364,14 +357,13 @@ img {
   height: 44px;
   padding: 0;
   border: none;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
 }
 .social-list .social-item + .social-item {
   margin-left: 10px;
-}
-.social-link:hover {
-  background-color: var(--accent-color);
 }
 
 .social-link-icon {
@@ -379,7 +371,12 @@ img {
   height: 20px;
   fill: #afb1b8;
 }
-.social-link-icon:hover {
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+.social-link:hover .social-link-icon,
+.social-link:focus .social-link-icon {
   fill: var(--bg-color);
 }
 
@@ -398,14 +395,16 @@ img {
 }
 
 .clients-link {
-  display: block;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--accent-color);
 }
 .clients-link-icon {
@@ -413,7 +412,8 @@ img {
   height: 60px;
   fill: #afb1b8;
 }
-.clients-link-icon:hover {
+.clients-link-icon:hover,
+.clients-link-icon:focus {
   fill: var(--accent-color);
 }
 /*----------------------------- Футер----------------------------------- */
@@ -475,7 +475,8 @@ img {
 .footer-social-list .footer-social-item + .footer-social-item {
   margin-left: 10px;
 }
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -484,7 +485,8 @@ img {
   height: 20px;
   fill: var(--bg-color);
 }
-.footer-social-icon:hover {
+.footer-social-icon:hover,
+.footer-social-icon:focus {
   fill: var(--bg-color);
 }
 .footer-container {
